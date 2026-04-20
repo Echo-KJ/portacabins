@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+  
+  --color-brand-black: #0d0d0d;
+  --color-brand-white: #faf9f7;
+  --color-brand-warm: #f5f1ec;
+  --color-brand-sand: #c9b99a;
+  --color-brand-mid: #6b6158;
+  --color-brand-accent: #8b6f47;
+  --color-brand-border: #e0d8cf;
+}
+
+@layer base {
+  :root {
+    --black: #0d0d0d;
+    --white: #faf9f7;
+    --warm: #f5f1ec;
+    --sand: #c9b99a;
+    --mid: #6b6158;
+    --accent: #8b6f47;
+    --border: #e0d8cf;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+@layer components {
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+  }
+
+  .section-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--mid);
+    max-width: 540px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 32px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    font-weight: 500;
+    transition: all 0.25s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .btn-white {
+    background: var(--white);
+    color: var(--black);
+    border: 1px solid var(--white);
+  }
+
+  .btn-white:hover {
+    background: transparent;
+    color: var(--white);
+  }
+
+  .btn-dark {
+    background: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+  }
+
+  .btn-dark:hover {
+    background: transparent;
+    color: var(--black);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
+  }
+
+  .btn-outline:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .btn-sand {
+    background: var(--sand);
+    color: var(--black);
+    border: 1px solid var(--sand);
+  }
+
+  .btn-sand:hover {
+    background: transparent;
+    color: var(--sand);
+  }
+}
